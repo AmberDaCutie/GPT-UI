@@ -209,10 +209,9 @@
     }
     let done = false;
     currentHistory = [...currentHistory];
-    let source = new SSE("https://api.openai.com/v1/chat/completions", {
+    let source = new SSE("https://gpt24-ecru.vercel.app/api/openai/v1/chat/completions", {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${$apiKey}`,
       },
       method: "POST",
       payload: JSON.stringify({
